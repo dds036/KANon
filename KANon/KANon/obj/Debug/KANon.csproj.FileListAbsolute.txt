@@ -1,0 +1,13 @@
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\bin\Debug\KANon.exe.config
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\bin\Debug\KANon.exe
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\bin\Debug\KANon.pdb
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\obj\Debug\KANon.csprojAssemblyReference.cache
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\obj\Debug\KANon.Properties.Resources.resources
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\obj\Debug\KANon.csproj.GenerateResource.cache
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\obj\Debug\KANon.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\obj\Debug\KANon.exe
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\obj\Debug\KANon.pdb
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\obj\Debug\KANon.Form2.resources
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\obj\Debug\KANon.Form3.resources
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\obj\Debug\KANon.Form1.resources
+C:\Users\Denis\Desktop\Проект\КАНон\KANon\KANon\bin\Debug\KANonDB.accdb
