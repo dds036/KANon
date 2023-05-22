@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,11 +64,23 @@
             this.kaNonDBDataSet1 = new KANon.KANonDBDataSet();
             this.сообщенияTableAdapter1 = new KANon.KANonDBDataSetTableAdapters.СообщенияTableAdapter();
             this.tableAdapterManager1 = new KANon.KANonDBDataSetTableAdapters.TableAdapterManager();
+            this.kANonDBDataSet11 = new KANon.KANonDBDataSet1();
+            this.mailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mailsTableAdapter = new KANon.KANonDBDataSet1TableAdapters.MailsTableAdapter();
+            this.tableAdapterManager = new KANon.KANonDBDataSet1TableAdapters.TableAdapterManager();
+            this.сообщенияTableAdapter2 = new KANon.KANonDBDataSetTableAdapters.СообщенияTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.текстСообщенияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датаОтправкиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kaNonDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kANonDBDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -292,7 +305,7 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(5, 24);
+            this.label1.Location = new System.Drawing.Point(0, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(359, 37);
             this.label1.TabIndex = 4;
@@ -302,7 +315,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(354, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(354, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -347,6 +360,70 @@
             this.tableAdapterManager1.ПользователиTableAdapter = null;
             this.tableAdapterManager1.СообщенияTableAdapter = this.сообщенияTableAdapter1;
             // 
+            // kANonDBDataSet11
+            // 
+            this.kANonDBDataSet11.DataSetName = "KANonDBDataSet1";
+            this.kANonDBDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mailsBindingSource
+            // 
+            this.mailsBindingSource.DataMember = "Mails";
+            this.mailsBindingSource.DataSource = this.kANonDBDataSet11;
+            // 
+            // mailsTableAdapter
+            // 
+            this.mailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.MailsTableAdapter = this.mailsTableAdapter;
+            this.tableAdapterManager.UpdateOrder = KANon.KANonDBDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UsersTableAdapter = null;
+            // 
+            // сообщенияTableAdapter2
+            // 
+            this.сообщенияTableAdapter2.ClearBeforeFill = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.кодDataGridViewTextBoxColumn,
+            this.текстСообщенияDataGridViewTextBoxColumn,
+            this.датаОтправкиDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.mailsBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(47, 112);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(346, 320);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // кодDataGridViewTextBoxColumn
+            // 
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            this.кодDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // текстСообщенияDataGridViewTextBoxColumn
+            // 
+            this.текстСообщенияDataGridViewTextBoxColumn.DataPropertyName = "Текст сообщения";
+            this.текстСообщенияDataGridViewTextBoxColumn.HeaderText = "Текст сообщения";
+            this.текстСообщенияDataGridViewTextBoxColumn.Name = "текстСообщенияDataGridViewTextBoxColumn";
+            this.текстСообщенияDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // датаОтправкиDataGridViewTextBoxColumn
+            // 
+            this.датаОтправкиDataGridViewTextBoxColumn.DataPropertyName = "Дата отправки";
+            this.датаОтправкиDataGridViewTextBoxColumn.HeaderText = "Дата отправки";
+            this.датаОтправкиDataGridViewTextBoxColumn.Name = "датаОтправкиDataGridViewTextBoxColumn";
+            this.датаОтправкиDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,13 +433,14 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(434, 685);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -376,6 +454,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kaNonDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kANonDBDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,6 +498,15 @@
         private KANonDBDataSet kaNonDBDataSet1;
         private KANonDBDataSetTableAdapters.СообщенияTableAdapter сообщенияTableAdapter1;
         private KANonDBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private KANonDBDataSet1 kANonDBDataSet11;
+        private System.Windows.Forms.BindingSource mailsBindingSource;
+        private KANonDBDataSet1TableAdapters.MailsTableAdapter mailsTableAdapter;
+        private KANonDBDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private KANonDBDataSetTableAdapters.СообщенияTableAdapter сообщенияTableAdapter2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn текстСообщенияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn датаОтправкиDataGridViewTextBoxColumn;
     }
 }
 

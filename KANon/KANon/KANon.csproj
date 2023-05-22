@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KANonDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="KANonDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KANonDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -99,6 +104,17 @@
     </None>
     <None Include="KANonDBDataSet.xss">
       <DependentUpon>KANonDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KANonDBDataSet1.xsc">
+      <DependentUpon>KANonDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KANonDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KANonDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KANonDBDataSet1.xss">
+      <DependentUpon>KANonDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
